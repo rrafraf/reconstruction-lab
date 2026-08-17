@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Reconstruction evidence event",
+  "type": "object",
+  "required": ["id", "source_id", "timestamp", "actor", "event"],
+  "properties": {
+    "id": {"type": "string"},
+    "source_id": {"type": "string"},
+    "thread_id": {"type": ["string", "null"]},
+    "timestamp": {"type": ["string", "null"]},
+    "actor": {"type": "string"},
+    "event": {"type": "string"},
+    "context": {"type": ["string", "null"]},
+    "outcome": {"type": ["string", "null"]},
+    "relationships": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "tags": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "raw_quote_ref": {"type": ["string", "null"]}
+  },
+  "additionalProperties": true
+}
