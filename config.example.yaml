@@ -1,0 +1,29 @@
+subject: example-subject
+
+sources:
+  - data/conversations/
+  - data/notes/
+
+metadata:
+  chronology: true
+  preserve_speakers: true
+  preserve_thread_boundaries: true
+
+goal:
+  reconstruct:
+    - decision_preferences
+    - attention_selection
+    - relationships
+    - working_style
+    - uncertainty_patterns
+
+evaluation:
+  holdout_fraction: 0.20
+  blind: true
+  compare_dimensions:
+    - choice_similarity
+    - attention_similarity
+    - objection_similarity
+    - priority_ordering
+    - uncertainty_handling
+    - style_similarity
