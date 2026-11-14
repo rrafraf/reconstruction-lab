@@ -16,10 +16,10 @@ Run from this repository folder (Python 3.10+, stdlib only):
 
 ```sh
 python tools/audit_export.py inspect /path/to/conversations.json \
-  --conversation-id 6aed6c23-0fd0-83ed-847c-074a5e79376d \
+  --conversation-id <CONVERSATION_ID> \
   --report choose-report.json
 python tools/audit_export.py verify /path/to/conversations.json \
-  --conversation-id 6aed6c23-0fd0-83ed-847c-074a5e79376d \
+  --conversation-id <CONVERSATION_ID> \
   --report choose-report.json
 ```
 
@@ -34,7 +34,7 @@ To audit **that the local checker really ran**, use the subprocess wrapper:
 ```sh
 python tools/receipt_run.py run --dir proof-001 --timeout 60 --artifact choose-report.json -- \
   python tools/audit_export.py inspect /path/to/conversations.json \
-  --conversation-id 6aed6c23-0fd0-83ed-847c-074a5e79376d --report choose-report.json
+  --conversation-id <CONVERSATION_ID> --report choose-report.json
 python tools/receipt_run.py verify --dir proof-001
 ```
 
